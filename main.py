@@ -1,3 +1,7 @@
+from Modelo.Liga import Liga
+
+liga= Liga
+
 def menu():
     salir=False
     print("###############################")
