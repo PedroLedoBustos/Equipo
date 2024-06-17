@@ -11,8 +11,12 @@ class Equipo:
         self.plantilla= []
         self.jugadorAlto= None
 
+    def getNombre(self):
+        return self.nombre
+
     def getEntrenador(self):
         return self.entrenador
+    
     def getJugadorAlto(self):
         return self.jugadorAlto
 
