@@ -9,6 +9,12 @@ class Equipo:
         self.ciudad= ciudad
         self.entrenador= None
         self.plantilla= []
+        self.jugadorAlto= None
+
+    def getEntrenador(self):
+        return self.entrenador
+    def getJugadorAlto(self):
+        return self.jugadorAlto
 
     def altaEntrenador(self):
         nombre= Utilidades.leerString("Introduce el nombre del entrenador: ")
