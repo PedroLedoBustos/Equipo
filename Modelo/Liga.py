@@ -39,7 +39,23 @@ class Liga:
         Liga.jugadoresAltos=[]
         for equipo in Liga.equipos:
             jugadorAlto= equipo.verJugadorAlto()
-            Liga.jugadoresAltos.append(jugadorAlto)
+            if jugadorAlto != None:
+                Liga.jugadoresAltos.append(jugadorAlto)
         
-        for jugador in Liga.jugadoresAltos:
-            print(f"Nombre: {jugador.getNombre()} Altura: {jugador.getAltura()}")
+        if not Liga.jugadoresAltos:
+            print("No hay jugadores registrados")
+        else:
+            for jugador in Liga.jugadoresAltos:
+                print(f"Nombre: {jugador.getNombre()} Altura: {jugador.getAltura()}")
+
+    def entrenadoresOrdenados():
+        Liga.entrenadores=[]
+
+        for equipo in Liga.equipos:
+            entrenador= equipo.getEntrenador()
+            Liga.entrenadores.append(entrenador)
+        
+        Liga.entrenadores.sort(key=lambda entrenador: entrenador.getAnioLicencia())
+
+        for mister in Liga.entrenadores:
+            print(f"Nombre: {mister.getNombre()} Año Licencia: {mister.getAnioLicencia()}")

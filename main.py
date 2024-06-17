@@ -21,7 +21,7 @@ def menu():
     elif opcion == "3":
         liga.playerAltos()
     elif opcion == "4":
-        liga.verEntrenadores()
+        liga.entrenadoresOrdenados()
     elif opcion == "5":
         print("Saliendo...")
         salir= True

@@ -44,12 +44,15 @@ class Equipo:
                 self.plantilla.append(jugador)
     
     def verJugadorAlto(self):
-        jugadorAlto= self.plantilla[0]
-        for jugador in self.plantilla:
-            if jugador.getAltura()> jugadorAlto.getAltura():
-                jugadorAlto= jugador
-        
-        return jugadorAlto
+        if not self.plantilla:
+            return None
+        else:
+            jugadorAlto= self.plantilla[0]
+            for jugador in self.plantilla:
+                if jugador.getAltura()> jugadorAlto.getAltura():
+                    jugadorAlto= jugador
+            
+            return jugadorAlto
 
         
 
