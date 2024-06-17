@@ -11,6 +11,7 @@ def menu():
     print("2 Alta Equipo")
     print("3 Ver jugadores mas altos")
     print("4 Lista entrenadores ordenada por antiguedad")
+    print("5 Salir")
     opcion= input("Elige una opción: ")
 
     if opcion == "1":
@@ -22,6 +23,7 @@ def menu():
     elif opcion == "4":
         liga.verEntrenadores()
     elif opcion == "5":
+        print("Saliendo...")
         salir= True
     else:
         print("Opción escogida no válida")
