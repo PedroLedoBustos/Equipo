@@ -34,3 +34,12 @@ class Liga:
             print("Equipo dado de baja correctamente")
         else:
             print("No hay ningun equipo con ese nombre")
+
+    def playerAltos():
+        Liga.jugadoresAltos=[]
+        for equipo in Liga.equipos:
+            jugadorAlto= equipo.verJugadorAlto()
+            Liga.jugadoresAltos.append(jugadorAlto)
+        
+        for jugador in Liga.jugadoresAltos:
+            print(f"Nombre: {jugador.getNombre()} Altura: {jugador.getAltura()}")

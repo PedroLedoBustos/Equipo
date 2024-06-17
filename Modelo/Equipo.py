@@ -22,7 +22,7 @@ class Equipo:
 
     def altaEntrenador(self):
         nombre= Utilidades.leerString("Introduce el nombre del entrenador: ")
-        apellido= Utilidades.leerString("Introduce el nombre del entrenador: ")
+        apellido= Utilidades.leerString("Introduce el apellido del entrenador: ")
         anioLicencia= Utilidades.leerInteger("Introduce el año de licencia del entrenador: ")
 
         self.entrenador= Entrenador(nombre,apellido,anioLicencia)
@@ -31,8 +31,8 @@ class Equipo:
         numeroJugadores= Utilidades.leerInteger("Introduce el numero de jugadores que quieres en tu equipo: ")
         for n in range(numeroJugadores):
             nombre= Utilidades.leerString("Introduce nombre jugador: ")
-            apellido= Utilidades.leerString("Introduce nombre jugador: ")
-            dorsal= Utilidades.leerInteger("Introduce nombre jugador: ")
+            apellido= Utilidades.leerString("Introduce apellido jugador: ")
+            dorsal= Utilidades.leerInteger("Introduce dorsal jugador: ")
             altura= Utilidades.leerFloat("Introduce la altura del jugador: ")
             peso= Utilidades.leerFloat("Introduce el peso del jugador: ")
 
@@ -42,5 +42,14 @@ class Equipo:
                 print(f"Lo siento, el dorsal {jugador.getDorsal()} ya está asignado.")
             else:
                 self.plantilla.append(jugador)
+    
+    def verJugadorAlto(self):
+        jugadorAlto= self.plantilla[0]
+        for jugador in self.plantilla:
+            if jugador.getAltura()> jugadorAlto.getAltura():
+                jugadorAlto= jugador
+        
+        return jugadorAlto
+
         
 

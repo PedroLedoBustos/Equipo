@@ -8,7 +8,7 @@ def menu():
     print("######## MENU PRINCIPAL #######")
     print("###############################")
     print("1 Alta Equipo")
-    print("2 Alta Equipo")
+    print("2 Baja Equipo")
     print("3 Ver jugadores mas altos")
     print("4 Lista entrenadores ordenada por antiguedad")
     print("5 Salir")
@@ -19,7 +19,7 @@ def menu():
     elif opcion == "2":
         liga.bajaEquipo()
     elif opcion == "3":
-        liga.verJugadoresAltos()
+        liga.playerAltos()
     elif opcion == "4":
         liga.verEntrenadores()
     elif opcion == "5":
