@@ -1,6 +1,6 @@
 from Modelo.Liga import Liga
 
-liga= Liga
+liga= Liga()
 
 def menu():
     salir=False
