@@ -8,9 +8,7 @@ def crearConexion():
         password= '',
         db= 'liga'
     )
-    if (conexion.is_connected()):
-        print(f'Conexion a la base de datos realizada con exito')
-    else:
+    if (conexion.is_connected()== False):
         print('Error al conectarse a la base de datos')
 
     return conexion
@@ -31,13 +29,8 @@ def cerrarConexion(conexion):
     conexion.close()
 
     if (conexion.is_connected()):
-        print(f'Sigues conectado a la base de datos')
-    else:
-        print('ya no estas conectado a la base de datos')
+        print('Error al cerrar la base de datos')
 
-
-
-insertarEntrenador()
 
     
 
