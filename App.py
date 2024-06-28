@@ -17,13 +17,10 @@ def menu():
 
     if opcion=="1":
         federacion.altaLiga()
-        print("1")
     elif opcion=="2":
         federacion.bajaLiga()
-        print("2")
     elif opcion=="3":
         federacion.verLigas()
-        print("3")
     elif opcion=="4":
         #federacion.login()
         print("4")
