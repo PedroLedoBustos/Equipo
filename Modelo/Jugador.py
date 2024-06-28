@@ -7,6 +7,7 @@ class Jugador (Persona):
         self.dorsal= dorsal
         self.altura= altura
         self.peso= peso
+        self.id= None
 
     def getDorsal(self):
         return self.dorsal
@@ -16,3 +17,9 @@ class Jugador (Persona):
     
     def getPeso(self):
         return self.peso
+    
+    def setIdJugador(self, id):
+        self.id= id
+    
+    def getIdJugador (self):
+        return self.id

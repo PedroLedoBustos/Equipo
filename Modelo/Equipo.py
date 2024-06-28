@@ -10,6 +10,13 @@ class Equipo:
         self.entrenador= None
         self.plantilla= []
         self.jugadorAlto= None
+        self.id= None
+    
+    def setIdEquipo(self, id):
+        self.id= id
+    
+    def getIdEquipo(self):
+        return self.id
 
     def getNombre(self):
         return self.nombre
